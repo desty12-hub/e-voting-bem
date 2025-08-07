@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pemilihan Umum Raya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 8px;
+      margin-bottom: 15px;
+    }
+
+    .kandidat {
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    .kandidat img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .kandidat label {
+      vertical-align: middle;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Form Pemilihan Ketua BEM</h2>
+    <form action="/submit" method="post">
+      <input type="text" name="nama" placeholder="Nama lengkap" required><br>
+      <input type="text" name="kelas" placeholder="Kelas" required><br>
+     <input type="text" name="NIM" placeholder="NIM" required><br>
+      <div class="kandidat">
+        <input type="radio" name="pilihan" value="Rafi" required>
+        <img src="/static/rafi.jpeg" alt="Rafi">
+        <label>Rafi</label>
+      </div>
+
+      <div class="kandidat">
+        <input type="radio" name="pilihan" value="Bara">
+        <img src="/static/bara.jpeg" alt="Bara">
+        <label>Bara</label>
+      </div>
+
+      <div class="kandidat">
+        <input type="radio" name="pilihan" value="Aldo">
+        <img src="/static/aldo.jpeg" alt="Aldo">
+        <label>Aldo</label>
+      </div>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+</body>
+</html>
